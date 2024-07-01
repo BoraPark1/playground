@@ -124,13 +124,13 @@ body {max-width: 393px; width: 393px; margin: 0 auto; overflow-x: hidden; font-s
 .wrap {width: 100%; background-color: rgb(255, 253, 232); padding: 0 0 20px;}
 .ko{ font-family: "Noto Sans KR", sans-serif; }
 header {width: calc(100% - 40px);  text-align: center; margin: 0 0 15px; padding: 10px 20px ; position: relative;} 
-header .title { color: rgb(255, 255, 255); background: #1b98ff; padding: 20px; text-align: center; display: inline-block; border-radius: 49%;  border: 2px solid #1b98ff; font-size: 14px; animation: title 1s;}
+header .title { color: rgb(255, 255, 255); background: #1b98ff; padding: 20px; text-align: center; display: inline-block; border-radius: 49%;  border: 2px solid #1b98ff; font-size: 14px; animation: title 1.5s;}
 header .title:hover {color:yellow;}
 
 @keyframes title {
   0% {transform: rotate3d(1, 1, 1, 0deg);}
-  50% {transform: rotate3d(1, 1, 1, 18deg);}
-  70% {transform: rotate3d(1, 1, 1, -18deg);}
+  50% {transform: rotate3d(1, 1, 1, 30deg);}
+  70% {transform: rotate3d(1, 1, 1, -50deg);}
   100% {transform: rotate3d(1, 1, 1,  0deg);}
 }
 

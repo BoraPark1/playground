@@ -93,8 +93,12 @@
                     spaceBetween:10,
                     slideOffsetBefore :10,
                     slideOffsetAfter :10,
+                    breakpoints: {
+                        400 : { slidesPerView: 1, 
+                        }
+                    },
                     centerInsufficientSlides: true,
-                    centeredSlides:false,
+                    centeredSlides:true,
                     autoplay:
                         {
                         delay:6000,
@@ -169,16 +173,13 @@
                             centeredSlides: false,
                             loop: true,
                             loopAdditionalSlides: 1,
-                            pagination: {
-                                el: ".swiper-pagination",
-                            },
                             
                         });
                     } else if (screenWidth > browserWidth + 1 && responslide != undefined) {
                         responslide.destroy();
                         responslide = undefined;
-                        jQuery('.responslide .swiper-wrapper').removeAttr('style');
-                        jQuery('.responslide .swiper-slide').removeAttr('style');
+                        jQuery('.swiper-wrapper').removeAttr('style');
+                        jQuery('.swiper-slide').removeAttr('style');
                     }
                 }
                 initSwiper();

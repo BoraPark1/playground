@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T-shirts collection made by 보돌~</title>
+    <title>T-shirts collection</title>
     <link rel="stylesheet" href="ts.css">
     <link rel="stylesheet" href="js/swiper-bundle.min.css">
 
@@ -16,40 +16,49 @@
             <div class="title"><a href="https://instagram.com/voradori">@voradori</a>'s playground</div>
         </header>
         <section class="tshirts_main">
+            <div class="t_title">T-shirts</div>
+            <ul class="list">
+                <li><a href="details/Ehhhing.html"><p><span class="num">01</span>/</p></a></li>
+                <li><a href="details/lovehater.html"><p><span class="num">02</span>/</p></a></li>
+                <li><a href="details/sindang.html"><p><span class="num">03</span>/</p></a></li>
+                <li><a href="details/anti.html"><p><span class="num">04</span>/</p></a></li>
+                <li><a href="details/patandmat.html"><p><span class="num">05</span>/</p></a></li>
+                <li><a href="#"><p><span class="num">06</span>/</p></a></li>
+            </ul>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                            <p class="subTit"><span class="num">01.</span><br> Ehhhing running club</p>
+                            <p class="subTit"><span class="num">01. </span> Ehhhing running club</p>
                             <div class="contents">
                                 <a href="details/Ehhhing.html"><p><img src="img/ehhh_front.png" alt=""></p></a>
                             </div>
                     </div>
                     <div class="swiper-slide">
-                            <p class="subTit"><span class="num">02.</span><br>The lover haters club</p>
+                            <p class="subTit"><span class="num">02. </span>The lover haters club</p>
                             <div class="contents">
                                 <a href="details/lovehater.html"><p><img src="img/lovehaters_front.png" alt=""></p></a>
                             </div>
                     </div>
                     <div class="swiper-slide">
-                            <p class="subTit"><span class="num">03.</span><br>The Sindang drinking club
+                            <p class="subTit"><span class="num">03. </span>The Sindang Drinking club
                                 <div class="contents">
                                     <a href="details/sindang.html"><p><img src="img/sindang_front.png" alt=""></p></a>
                                 </div>
                     </div>
                     <div class="swiper-slide">
-                            <p class="subTit"><span class="num">04.</span><br>Anti-Running Club</p>
+                            <p class="subTit"><span class="num">04. </span>Anti-Running Club</p>
                             <div class="contents">
                                 <a href="details/anti.html"><p><img src="img/sports_front.png" alt=""></p></a>
                             </div>
                     </div>
                     <div class="swiper-slide" >
-                            <p class="subTit"><span class="num">05.</span><br>PAT & MAT</p>
+                            <p class="subTit"><span class="num">05. </span>PAT & MAT</p>
                             <div class="contents">
                                 <a href="details/patandmat.html"><p ></p><img src="img/pm_front.png" alt=""></p></a>
                             </div>
                     </div>
                     <div class="swiper-slide">
-                        <p class="subTit"><span class="num">0-.</span><br>more...more</p>
+                        <p class="subTit"><span class="num">0-. </span>more...more</p>
                         <div class="contents">
                             <a href="#"><p style="text-align: center;">coming soon update<img src="" alt=""></p></a>
                         </div>
@@ -138,7 +147,7 @@
                 MainSwiper.controller.control = SubSwiper;
                 SubSwiper.controller.control = MainSwiper; 
                  */
-                $(".swiper-button-start ").click(function() {
+                /* $(".swiper-button-start ").click(function() {
                     MainSwiper.autoplay.start();
                     $(".swiper-button-start img").addClass('button_on').siblings();
                     $(".swiper-button-pause img").removeClass('button_on');
@@ -147,18 +156,46 @@
                     MainSwiper.autoplay.stop();
                     $(".swiper-button-pause img").addClass('button_on').siblings();
                     $(".swiper-button-start img").removeClass('button_on').removeClass('start_filter');
+                }); */
+                var responslide = undefined;
+                var browserWidth = 394; //스크립트가 작동할 가로 넓이
+                var spacebetween = 10; // 슬라이드 장면들의 간격
+                function initSwiper() {
+                    
+                    var screenWidth = $(window).width();
+                    if(screenWidth < browserWidth && responslide == undefined) {
+                        responslide = new Swiper("mySwiper", {
+                            spaceBetween: spacebetween,
+                            centeredSlides: false,
+                            loop: true,
+                            loopAdditionalSlides: 1,
+                            pagination: {
+                                el: ".swiper-pagination",
+                            },
+                            
+                        });
+                    } else if (screenWidth > browserWidth + 1 && responslide != undefined) {
+                        responslide.destroy();
+                        responslide = undefined;
+                        jQuery('.responslide .swiper-wrapper').removeAttr('style');
+                        jQuery('.responslide .swiper-slide').removeAttr('style');
+                    }
+                }
+                initSwiper();
+                $(window).on('resize', function(){
+                    initSwiper();
                 });
-                var resizeCheck; // 리사이즈 END체크
-                $(window).resize(function(){
-                    if(resizeCheck){ //계속 리사이즈중이면 clear
-                        clearTimeout(resizeCheck); 
-                    };
-                
-                    //0.5초이상 리사이즈 지속하지않으면 실행
-                    resizeCheck = setTimeout(function(){
-                        console.log("resizeEnd");
-                        MainSwiper.update(); //스와이퍼 업데이트
-                        
+                            var resizeCheck; // 리사이즈 END체크
+                            $(window).resize(function(){
+                                if(resizeCheck){ //계속 리사이즈중이면 clear
+                                    clearTimeout(resizeCheck); 
+                                };
+                            
+                                //0.5초이상 리사이즈 지속하지않으면 실행
+                                resizeCheck = setTimeout(function(){
+                                    console.log("resizeEnd");
+                                    MainSwiper.update(); //스와이퍼 업데이트
+                                    
                     });
                     });
                 });

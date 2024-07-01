@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&family=Playwrite+US+Modern:wght@100..400&display=swap');
+
 /* reset */
 * {margin: 0;padding: 0;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
@@ -93,27 +95,53 @@ button:focus {outline: none}
     font-style: italic;
   }
   
-
-
   .noto-sans-kr {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
   }
-body {max-width: 393px; width: 393px; margin: 0 auto; overflow-x: hidden; font-size: 20px; font-family: "Montserrat", sans-serif; font-family: "Noto Sans KR", sans-serif; }
+  /*  <uniquifier>: Use a unique and descriptive class name
+  <weight>: Use a value from 100 to 400 */
+
+  .playwrite-us-modern {
+    font-family: "Playwrite US Modern", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .playwrite-us-modern {
+    font-family: "Playwrite US Modern", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+body {max-width: 393px; width: 393px; margin: 0 auto; overflow-x: hidden; font-size: 15px; font-family: "Montserrat", sans-serif; font-family: "Noto Sans KR", sans-serif; }
 
 /* main */
 .wrap {width: 100%; background-color: rgb(255, 253, 232); padding: 0 0 20px;}
 .ko{ font-family: "Noto Sans KR", sans-serif; }
-header {width: calc(100% - 40px); background: #27c3df; text-align: center; margin: 0 0 15px; padding: 20px 20px ; position: relative;} 
-header .title { color: rgb(255, 255, 255);}
+header {width: calc(100% - 40px);  text-align: center; margin: 0 0 15px; padding: 10px 20px ; position: relative;} 
+header .title { color: rgb(255, 255, 255); background: #1b98ff; padding: 20px; text-align: center; display: inline-block; border-radius: 49%;  border: 2px solid #1b98ff; font-size: 14px; animation: title 1s;}
 header .title:hover {color:yellow;}
+
+@keyframes title {
+  0% {transform: rotate3d(1, 1, 1, 0deg);}
+  50% {transform: rotate3d(1, 1, 1, 18deg);}
+  70% {transform: rotate3d(1, 1, 1, -18deg);}
+  100% {transform: rotate3d(1, 1, 1,  0deg);}
+}
+
+
 
 .click {border: 1px solid salmon; margin: 100px auto 35vh; padding: 20px; border-radius: 50%; font-size: 13px; width: fit-content; color: #12253bf0; font-weight: 500; }
 .click:hover {background: salmon; color: #fff; }
 div.pro{text-align: center; line-height: 1.5;}
 div .main_text {margin: 0 0 50px 0;}
+
+
 /* footer */
 .footer {width: 100%; margin: 10px 0;}
 .footer .home {margin: 15px auto 0px; padding: 8px; border: 3px solid #b5fd5886; width: fit-content; color: #1b4974;  font-size: 10px;}
@@ -122,17 +150,29 @@ div .main_text {margin: 0 0 50px 0;}
 
 /* tshirts main */
 .tshirts_main {width: 100%;}
-.tshirts_main .swiper.mySwiper .swiper-wrapper {}
-.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit {text-align: center; margin: 10px 0 0px 0; font-family: "Roboto", sans-serif; font-weight: 700; font-style: normal; font-size: 25px; color: #1e2f53; letter-spacing: 1px;}
-.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit .num { color: #1b4974; font-size: 30px; font-family: "Roboto", sans-serif; font-weight: 700; font-style: italic;}
+.tshirts_main .t_title {width: 100%; text-align: center; margin: 0 0 5px 0; font-family: "Playwrite US Modern", cursive; font-weight: 500; font-size: 18px;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper {width: 100%; position: relative;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit {text-align: center; margin: 10px 0 0px 0; font-weight: 700; font-style: normal; font-size: 19px; color: #045255; }
+.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit .num { color: #2eca75; font-size: 18px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents {width: calc(100% - 60px); padding: 30px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents p {width: 100%; margin:0 auto;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents p a img {width: 100%; margin: 0 auto;}
+.tshirts_main .list {width: calc(100% - 20%); margin: 0 auto 30px; display: flex; justify-content: space-evenly; position: relative;}
+.tshirts_main .list::after {position: absolute; top: 10%; left: 0; width: 10px; height: 10px; background: #000; display: block;} 
+.tshirts_main .list li {text-align: center; font-weight: 700;}
+.tshirts_main .list li:hover {text-decoration: underline;}
+.tshirts_main .list li p {color: #27c3df; font-size: 10px;}
+
+.tshirts_main .list li p span.num {font-size: 15px; color: #da21ff;}
+.tshirts_main .list li p span.num:hover {color: #ff5199;}
+
+
 
 /* T shirt_상세 */
 .tshirt_page {width: 100%; margin: 0 auto; text-align: center;}
 .tshirt_page .subTit {text-align: center; margin: 0 0 20px 0; font-weight: bold; color: rgb(0, 88, 252); font-size: 25px; }
-.tshirt_page .subTit .num {color: #ff8800;}
+.tshirt_page .subTit .num {color: #9dff00;}
+
 
 .tshirt_page ul {position: relative;}
 .tshirt_page ul li { text-align: center; font-size: 15px; margin: 0 0 40px 0; color: #1b4974; width: 100%;}
@@ -162,13 +202,13 @@ div .main_text {margin: 0 0 50px 0;}
 /* swiper */
 :root {
     --swiper-navigation-size: 30px !important;
-    --swiper-theme-color: #9e4002f0 !important;
+    --swiper-theme-color: #d0ff00f0 !important;
 
 }
 
 .swiper-button-next, .swiper-button-prev {
     position: absolute;
-    top: 70% !important;
+    top: 55% !important;
 
 
 }

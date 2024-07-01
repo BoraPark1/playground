@@ -119,7 +119,10 @@ button:focus {outline: none}
 
 
 body {max-width: 393px; width: 393px; margin: 0 auto; overflow-x: hidden; font-size: 15px; font-family: "Montserrat", sans-serif; font-family: "Noto Sans KR", sans-serif; }
-
+/* index */
+.main_list {margin: 50px 0;}
+.main_list li{margin: 20px; text-decoration: line-through;}
+.main_list li:first-child {text-decoration:none;}
 /* main */
 .wrap {width: 100%; background-color: rgb(255, 253, 232); padding: 0 0 20px;}
 .ko{ font-family: "Noto Sans KR", sans-serif; }
@@ -136,7 +139,7 @@ header .title:hover {color:yellow;}
 
 
 
-.click {border: 1px solid salmon; margin: 100px auto 35vh; padding: 20px; border-radius: 50%; font-size: 13px; width: fit-content; color: #12253bf0; font-weight: 500; }
+.click {border: 2px solid salmon; margin: 100px auto 0; padding: 10px; /* border-radius: 50%; */ font-size: 15px; width: fit-content; color: #12253bf0; font-weight: 500; }
 .click:hover {background: salmon; color: #fff; }
 div.pro{text-align: center; line-height: 1.5;}
 div .main_text {margin: 0 0 50px 0;}
@@ -202,14 +205,14 @@ div .main_text {margin: 0 0 50px 0;}
 
 /* swiper */
 :root {
-    --swiper-navigation-size: 30px !important;
+    --swiper-navigation-size: 20px !important;
     --swiper-theme-color: #d0ff00f0 !important;
 
 }
 
 .swiper-button-next, .swiper-button-prev {
     position: absolute;
-    top: 55% !important;
+    top: 195px !important;
 
 
 }

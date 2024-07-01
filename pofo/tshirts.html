@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tshirts collection</title>
+    <title>T-shirts collection made by 보돌~</title>
     <link rel="stylesheet" href="ts.css">
     <link rel="stylesheet" href="js/swiper-bundle.min.css">
 
@@ -13,8 +13,7 @@
 <body>
     <div class="wrap">
         <header>
-            <a href="main.html"><div class="title"><a href="https://instagram.com/voradori">@voradori</a>'s playground</div></a>
-
+            <div class="title"><a href="https://instagram.com/voradori">@voradori</a>'s playground</div>
         </header>
         <section class="tshirts_main">
             <div class="swiper mySwiper">
@@ -59,9 +58,9 @@
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-<!--             <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
             <div class="side_grdnt left"></div>
-            <div class="side_grdnt right"></div> -->
+            <div class="side_grdnt right"></div>
         </section>
         <div class="footer">
             <div class="home"><a href="main.html" >Hoooooome</a></div>
@@ -71,60 +70,97 @@
     
 </body>
 <script>
+/*         $(window).on('load resize', function() {
+    var service_height = $("html,body").height() ;
+    parent.$("iframe.main_service").height(service_height);
+    }); */
 
-    //swiper
-    $("document").ready(function(){
-        var MainSwiper = $('.mySwiper').find('.swiper-slide');
-            var MainSwiper = new Swiper(".mySwiper",{
-                /* slidesPerView:'auto', */
-                spaceBetween:10,
-                slideOffsetBefore :10,
-                slideOffsetAfter :10,
-                centerInsufficientSlides: true,
-                centeredSlides:false,
-                autoplay:
-                    {
-                    delay:6000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true
-                    },
-                loop:true,
-                loopedSlides:6,
-                navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-                },
-                /* pagination:{
-                    el:".swiper-pagination",
-                    type:"fraction",
-                    formatFractionCurrent: function(number) {return('0' + number).slice(-2)}, 
-                    formatFractionTotal: function(number) {return('0' + number).slice(-2)}, 
-                },  */
-                observer:true,
-                observeparents:true,
-                slideToClickedSlide: true,	
-                /* breakpoints: {
-            
-                    350: {
+        //swiper
+        $("document").ready(function(){
+            var MainSwiper = $('.mySwiper').find('.swiper-slide');
+/*             var SubSwiper = $('.mySwiper2').find('.swiper-slide'); */
+                var MainSwiper = new Swiper(".mySwiper",{
                     slidesPerView:'auto',
                     spaceBetween:10,
+                    slideOffsetBefore :10,
+                    slideOffsetAfter :10,
+                    centerInsufficientSlides: true,
                     centeredSlides:false,
-                    
+                    autoplay:
+                        {
+                        delay:6000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                        },
+                    loop:true,
+                    loopedSlides:6,
+                    navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
                     },
-                }, */
-            });
-    
-            
-            $(".swiper-button-start ").click(function() {
-                MainSwiper.autoplay.start();
-                $(".swiper-button-start img").addClass('button_on').siblings();
-                $(".swiper-button-pause img").removeClass('button_on');
-            });
-            $(".swiper-button-pause").click(function() {
-                MainSwiper.autoplay.stop();
-                $(".swiper-button-pause img").addClass('button_on').siblings();
-                $(".swiper-button-start img").removeClass('button_on').removeClass('start_filter');
-            });
-            });
+                    /* pagination:{
+                        el:".swiper-pagination",
+                        type:"fraction",
+                        formatFractionCurrent: function(number) {return('0' + number).slice(-2)}, 
+                        formatFractionTotal: function(number) {return('0' + number).slice(-2)}, 
+                    }, */
+                    observer:true,
+                    observeparents:true,
+                    slideToClickedSlide: true,	
+                    /* breakpoints: {
+                
+                        350: {
+                        slidesPerView:'auto',
+                        spaceBetween:10,
+                        centeredSlides:false,
+                        
+                        },
+                    }, */
+                });
+        
+/*                 var SubSwiper = new Swiper(".mySwiper2",{
+                    slidesPerView:1,
+                    spaceBetween:5,
+                    slideOffsetBefore :0,
+                    slideOffsetAfter :0,
+                    centerInsufficientSlides: true,
+                    centeredSlides:true, 
+                    loop:true,
+                    loopedSlides:5,
+                    controller: {
+                    control : 'mySwiper',
+                        },
+                    observer:true,
+                    observeparents:true,
+                    slideToClickedSlide: true,	
+        
+                });
+                MainSwiper.controller.control = SubSwiper;
+                SubSwiper.controller.control = MainSwiper; 
+                 */
+                $(".swiper-button-start ").click(function() {
+                    MainSwiper.autoplay.start();
+                    $(".swiper-button-start img").addClass('button_on').siblings();
+                    $(".swiper-button-pause img").removeClass('button_on');
+                });
+                $(".swiper-button-pause").click(function() {
+                    MainSwiper.autoplay.stop();
+                    $(".swiper-button-pause img").addClass('button_on').siblings();
+                    $(".swiper-button-start img").removeClass('button_on').removeClass('start_filter');
+                });
+                var resizeCheck; // 리사이즈 END체크
+                $(window).resize(function(){
+                    if(resizeCheck){ //계속 리사이즈중이면 clear
+                        clearTimeout(resizeCheck); 
+                    };
+                
+                    //0.5초이상 리사이즈 지속하지않으면 실행
+                    resizeCheck = setTimeout(function(){
+                        console.log("resizeEnd");
+                        MainSwiper.update(); //스와이퍼 업데이트
+                        
+                    });
+                    });
+                });
     </script>
 </html>

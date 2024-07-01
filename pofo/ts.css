@@ -118,16 +118,17 @@ button:focus {outline: none}
   }
 
 
-body {max-width: 393px; width: 393px; margin: 0 auto; overflow-x: hidden; font-size: 15px; font-family: "Montserrat", sans-serif; font-family: "Noto Sans KR", sans-serif; }
+body {max-width: 393px; width: 393px; margin: 0 auto; overflow-x: hidden; font-size: 15px; font-family: "Montserrat", sans-serif; /* font-family: "Noto Sans KR", sans-serif; */ }
+.ko{ font-family: "Noto Sans KR", sans-serif; }
 /* index */
 .main_list {margin: 50px 0;}
 .main_list li{margin: 20px; text-decoration: line-through;}
 .main_list li:first-child {text-decoration:none;}
 /* main */
 .wrap {width: 100%; background-color: rgb(255, 253, 232); padding: 0 0 20px;}
-.ko{ font-family: "Noto Sans KR", sans-serif; }
+
 header {width: calc(100% - 40px);  text-align: center; margin: 0 0 15px; padding: 10px 20px ; position: relative;} 
-header .title { color: rgb(255, 255, 255); background: #1b98ff; padding: 20px; text-align: center; display: inline-block; border-radius: 49%;  border: 2px solid #1b98ff; font-size: 14px; animation: title 1.5s;}
+header .title { color: rgb(255, 255, 255); background: #1b98ff; padding: 20px; text-align: center; display: inline-block; border-radius: 49%;  border: 2px solid #1b98ff; font-size: 14px; animation: title 1.5s; font-weight: 500;}
 header .title:hover {color:yellow;}
 
 @keyframes title {
@@ -142,7 +143,7 @@ header .title:hover {color:yellow;}
 .click {border: 2px solid salmon; margin: 100px auto 0; padding: 10px; /* border-radius: 50%; */ font-size: 15px; width: fit-content; color: #12253bf0; font-weight: 500; }
 .click:hover {background: salmon; color: #fff; }
 div.pro{text-align: center; line-height: 1.5;}
-div .main_text {margin: 0 0 50px 0;}
+div .main_text {margin: 0 0 0px 0;}
 
 
 /* footer */
@@ -153,29 +154,28 @@ div .main_text {margin: 0 0 50px 0;}
 
 /* tshirts main */
 .tshirts_main {width: 100%;}
-.t_title {width: 100%; text-align: center; margin: 0 0 5px 0; font-family: "Playwrite US Modern", cursive; font-weight: 500; font-size: 18px;}
+.t_title {width: 100%; text-align: center; margin: 0 0 5px 0; font-family: "Playwrite US Modern", cursive; font-weight: 500; font-size: 15px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper {width: 100%; position: relative;}
-.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit {text-align: center; margin: 10px 0 0px 0; font-weight: 700; font-style: normal; font-size: 19px; color: #045255; }
+.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit {text-align: center; margin: 25px 0 0px 0; font-weight: 700; font-style: normal; font-size: 17px; color: #045255; }
 .tshirts_main .swiper.mySwiper .swiper-wrapper .subTit .num { color: #2eca75; font-size: 18px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents {width: calc(100% - 60px); padding: 30px;}
-.tshirts_main .swiper.mySwiper .swiper-wrapper .contents p {width: 100%; margin:0 auto;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper .contents p {width: 100%; margin:0 auto 10px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents p a img {width: 100%; margin: 0 auto;}
 
 
 .list {width: calc(100% - 30%); margin: 0 auto; display: flex; justify-content: space-evenly; position: relative;}
-.list::after {position: absolute; top: 10%; left: 0; width: 10px; height: 10px; background: #000; display: block;} 
 .list li {text-align: center; font-weight: 700;}
 .list li:hover {text-decoration: underline;}
 .list li p {color: #27c3df; font-size: 10px;}
-.list li p span.num {font-size: 15px; color: #da21ff;}
+.list li p span.num {font-size: 15px; color: #ee97ff;}
 .list li p span.num:hover {color: #ff5199;}
 
 
 
 /* T shirt_상세 */
 .tshirt_page {width: 100%; margin: 0 auto; text-align: center;}
-.tshirt_page .subTit {text-align: center; margin: 0px 0 20px 0; font-weight: bold; color: rgb(0, 88, 252); font-size: 20px; }
-.tshirt_page .subTit .num { color: #2eca75; font-size: 18px;}
+.tshirt_page .subTit {text-align: center; margin: 0px 0 50px 0; font-weight: bold; color: rgb(0, 88, 252); font-size: 17px; }
+.tshirt_page .subTit .num { color: #2eca75; font-size: 15px;}
 
 
 .tshirt_page ul {position: relative;}
@@ -183,7 +183,7 @@ div .main_text {margin: 0 0 50px 0;}
 .tshirt_page ul li .fr {margin: 10px 0 0 0;}
 .tshirt_page ul li .gra {width: calc(100% - 40px); background: #fff; margin: 20px auto;}
 .tshirt_page ul li .gra img {width: calc(70% - 60px); padding: 30px;}
-.ho1 {width: 23%; position: absolute; top: 9%; left: 52%; animation: svg1 2s 1 ; }
+.ho1 {width: 23%; position: absolute; top: 9%; left: 52%; animation: svg1 2s 1 ;}
 .ho2 {width: 26%; position: absolute; top: 15%; left: 38%; animation: svg2 1.8s 1; }
 @keyframes svg1 {
     0% {left:-50%; top: 0%;}
@@ -212,7 +212,7 @@ div .main_text {margin: 0 0 50px 0;}
 
 .swiper-button-next, .swiper-button-prev {
     position: absolute;
-    top: 195px !important;
+    top: 180px !important;
 
 
 }

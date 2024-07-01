@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+
+  .noto-sans-kr {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+body {max-width: 393px; width: 393px; margin: 0 auto; overflow-x: hidden; font-size: 20px; font-family: "Montserrat", sans-serif; font-family: "Noto Sans KR", sans-serif; }
+
+/* main */
+.wrap {width: 100%; background-color: rgb(255, 253, 232); padding: 0 0 20px;}
+.ko{ font-family: "Noto Sans KR", sans-serif; }
+header {width: calc(100% - 40px); background: #27c3df; text-align: center; margin: 0 0 15px; padding: 20px 20px ; position: relative;} 
+header .title { color: rgb(255, 255, 255);}
+header .title:hover {color:yellow;}
+
+.click {border: 1px solid salmon; margin: 100px auto 35vh; padding: 20px; border-radius: 50%; font-size: 13px; width: fit-content; color: #12253bf0; font-weight: 500; }
+.click:hover {background: salmon; color: #fff; }
+div.pro{text-align: center; line-height: 1.5;}
+div .main_text {margin: 0 0 50px 0;}
+/* footer */
+.footer {width: 100%; margin: 10px 0;}
+.footer .home {margin: 15px auto 0px; padding: 8px; border: 3px solid #b5fd5886; width: fit-content; color: #1b4974;  font-size: 10px;}
+.footer .home:hover{background: #b5fd5886; color: rgb(255, 145, 0);}
+.copy {font-size: 10px; text-align: center; margin: 20px 0 0 0;}
+
+/* tshirts main */
+.tshirts_main {width: 100%;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper {}
+.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit {text-align: center; margin: 10px 0 0px 0; font-family: "Roboto", sans-serif; font-weight: 700; font-style: normal; font-size: 25px; color: #1e2f53; letter-spacing: 1px;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper .subTit .num { color: #1b4974; font-size: 30px; font-family: "Roboto", sans-serif; font-weight: 700; font-style: italic;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper .contents {width: calc(100% - 60px); padding: 30px;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper .contents p {width: 100%; margin:0 auto;}
+.tshirts_main .swiper.mySwiper .swiper-wrapper .contents p a img {width: 100%; margin: 0 auto;}
+
+/* T shirt_상세 */
+.tshirt_page {width: 100%; margin: 0 auto; text-align: center;}
+.tshirt_page .subTit {text-align: center; margin: 0 0 20px 0; font-weight: bold; color: rgb(0, 88, 252); font-size: 25px; }
+.tshirt_page .subTit .num {color: #ff8800;}
+
+.tshirt_page ul {position: relative;}
+.tshirt_page ul li { text-align: center; font-size: 15px; margin: 0 0 40px 0; color: #1b4974; width: 100%;}
+.tshirt_page ul li .fr {margin: 10px 0 0 0;}
+.tshirt_page ul li .gra {width: calc(100% - 40px); background: #fff; margin: 20px auto;}
+.tshirt_page ul li .gra img {width: calc(70% - 60px); padding: 30px;}
+.ho1 {width: 23%; position: absolute; top: 9%; left: 52%; animation: svg1 2s 1 ; }
+.ho2 {width: 26%; position: absolute; top: 15%; left: 38%; animation: svg2 1.8s 1; }
+@keyframes svg1 {
+    0% {left:-50%; top: 0%;}
+    20% {left:10%; top: 9%;}
+    40% {left:20%; top: 0%;}
+    60% {left:30%; top: 9%;}
+    80% {left:40%; top: 0%;}
+    100% {left: 52%; top: 9%;}
+}
+@keyframes svg2 {
+    0% {left:-50%; top: 0%;}
+    20% {left:5%; top: 15%;}
+    40% {left:10%; top: 0%;}
+    60% {left:20%; top: 15%;}
+    80% {left:30%; top: 0%;}
+    100% {left: 38%; top: 15%;}
+}
+
+
+/* swiper */
+:root {
+    --swiper-navigation-size: 20px !important;
+    --swiper-theme-color: #f8af7ef0 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50% !important;
+
+}

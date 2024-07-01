@@ -150,32 +150,33 @@ div .main_text {margin: 0 0 50px 0;}
 
 /* tshirts main */
 .tshirts_main {width: 100%;}
-.tshirts_main .t_title {width: 100%; text-align: center; margin: 0 0 5px 0; font-family: "Playwrite US Modern", cursive; font-weight: 500; font-size: 18px;}
+.t_title {width: 100%; text-align: center; margin: 0 0 5px 0; font-family: "Playwrite US Modern", cursive; font-weight: 500; font-size: 18px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper {width: 100%; position: relative;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .subTit {text-align: center; margin: 10px 0 0px 0; font-weight: 700; font-style: normal; font-size: 19px; color: #045255; }
 .tshirts_main .swiper.mySwiper .swiper-wrapper .subTit .num { color: #2eca75; font-size: 18px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents {width: calc(100% - 60px); padding: 30px;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents p {width: 100%; margin:0 auto;}
 .tshirts_main .swiper.mySwiper .swiper-wrapper .contents p a img {width: 100%; margin: 0 auto;}
-.tshirts_main .list {width: calc(100% - 20%); margin: 0 auto 30px; display: flex; justify-content: space-evenly; position: relative;}
-.tshirts_main .list::after {position: absolute; top: 10%; left: 0; width: 10px; height: 10px; background: #000; display: block;} 
-.tshirts_main .list li {text-align: center; font-weight: 700;}
-.tshirts_main .list li:hover {text-decoration: underline;}
-.tshirts_main .list li p {color: #27c3df; font-size: 10px;}
 
-.tshirts_main .list li p span.num {font-size: 15px; color: #da21ff;}
-.tshirts_main .list li p span.num:hover {color: #ff5199;}
+
+.list {width: calc(100% - 30%); margin: 0 auto; display: flex; justify-content: space-evenly; position: relative;}
+.list::after {position: absolute; top: 10%; left: 0; width: 10px; height: 10px; background: #000; display: block;} 
+.list li {text-align: center; font-weight: 700;}
+.list li:hover {text-decoration: underline;}
+.list li p {color: #27c3df; font-size: 10px;}
+.list li p span.num {font-size: 15px; color: #da21ff;}
+.list li p span.num:hover {color: #ff5199;}
 
 
 
 /* T shirt_상세 */
 .tshirt_page {width: 100%; margin: 0 auto; text-align: center;}
-.tshirt_page .subTit {text-align: center; margin: 0 0 20px 0; font-weight: bold; color: rgb(0, 88, 252); font-size: 25px; }
-.tshirt_page .subTit .num {color: #9dff00;}
+.tshirt_page .subTit {text-align: center; margin: 0px 0 20px 0; font-weight: bold; color: rgb(0, 88, 252); font-size: 20px; }
+.tshirt_page .subTit .num { color: #2eca75; font-size: 18px;}
 
 
 .tshirt_page ul {position: relative;}
-.tshirt_page ul li { text-align: center; font-size: 15px; margin: 0 0 40px 0; color: #1b4974; width: 100%;}
+.tshirt_page ul li { text-align: center; font-size: 15px; margin: 0 0 40px 0; color: #9682f3; width: 100%; font-weight: 700;}
 .tshirt_page ul li .fr {margin: 10px 0 0 0;}
 .tshirt_page ul li .gra {width: calc(100% - 40px); background: #fff; margin: 20px auto;}
 .tshirt_page ul li .gra img {width: calc(70% - 60px); padding: 30px;}

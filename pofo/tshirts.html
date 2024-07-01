@@ -6,7 +6,9 @@
     <title>T-shirts collection</title>
     <link rel="stylesheet" href="ts.css">
     <link rel="stylesheet" href="js/swiper-bundle.min.css">
+
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -85,15 +87,14 @@
         //swiper
         $("document").ready(function(){
             var MainSwiper = $('.mySwiper').find('.swiper-slide');
-/*             var SubSwiper = $('.mySwiper2').find('.swiper-slide'); */
-                var MainSwiper = new Swiper(".mySwiper",{
+            var MainSwiper = new Swiper(".mySwiper",{
                     slidesPerView:'auto',
                     spaceBetween:10,
                     slideOffsetBefore :10,
                     slideOffsetAfter :10,
                     breakpoints: {
                         400 : { slidesPerView: 1, 
-                        }
+                        },
                     },
                     centerInsufficientSlides: true,
                     centeredSlides:true,
